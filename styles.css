@@ -452,12 +452,7 @@ tbody th {
 }
 
 tbody td:nth-child(3) {
-  width:29%;
-}
-
-tbody td:last-child {
-  width:15%;
-  white-space:nowrap;
+  width:40%;
 }
 
 tbody tr:last-child>* {
@@ -478,11 +473,6 @@ tbody tr:last-child>* {
 .status.ok {
   background:#e7efe7;
   color:#294b32;
-}
-
-.status.partial {
-  background:#faeddd;
-  color:#795015;
 }
 
 .table-note {
@@ -664,25 +654,8 @@ dialog p {
   color:var(--muted);
 }
 
-.report-grid {
-  display:grid;
-  grid-template-columns:.8fr 1.2fr;
-  gap:13px;
-}
-
-.report-grid .actions {
+#relatorio .actions {
   margin-top:14px;
-}
-
-.report-grid ul {
-  margin:10px 0 0;
-  padding-left:21px;
-  color:var(--muted);
-  font-size:14px;
-}
-
-.report-grid li+li {
-  margin-top:6px;
 }
 
 .student {
@@ -849,7 +822,7 @@ dialog p {
     width:6px;
     height:6px;
   }
-  .cards,.documents,.report-grid,.student,.flow {
+  .cards,.documents,.student,.flow {
     grid-template-columns:1fr;
   }
   .gallery {
@@ -890,14 +863,14 @@ dialog p {
   tbody tr {
     margin-bottom:9px;
     display:grid;
-    grid-template-columns:1fr 1fr;
+    grid-template-columns:1fr;
     gap:6px 8px;
     background:var(--white);
     padding:13px;
     border-radius:8px;
     border:1px solid var(--line);
   }
-  tbody th,tbody td,tbody td:nth-child(3),tbody td:last-child {
+  tbody th,tbody td,tbody td:nth-child(3) {
     width:auto;
     padding:0;
     border:0;

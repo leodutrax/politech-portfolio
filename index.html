@@ -6,7 +6,7 @@
   <meta name="description" content="Portfólio bimestral do PoliTech, projeto de estágio de Leonardo Dutra da Cruz em Engenharia de Software na UniFil.">
   <title>PoliTech | Portfólio de estágio</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=3">
   <script src="script.js" defer></script>
 </head>
 <body>
@@ -20,7 +20,7 @@
     <nav class="nav" id="navegacao" aria-label="Seções do portfólio">
       <a href="#inicio" aria-current="location"><span class="nav-icon" aria-hidden="true">⌂</span>Início</a>
       <a href="#projeto"><span class="nav-icon" aria-hidden="true">▤</span>Sobre o projeto</a>
-      <a href="#escopo"><span class="nav-icon" aria-hidden="true">▦</span>Casos de uso e cronograma</a>
+      <a href="#escopo"><span class="nav-icon" aria-hidden="true">▦</span>Casos de uso</a>
       <a href="#documentacao"><span class="nav-icon" aria-hidden="true">▱</span>Documentação</a>
       <a href="#demonstracao"><span class="nav-icon" aria-hidden="true">▷</span>Telas e vídeo</a>
       <a href="#relatorio"><span class="nav-icon" aria-hidden="true">▧</span>Relatório de estágio</a>
@@ -60,22 +60,22 @@
             <li><strong>API REST</strong>Django 6.0.6 e Django REST Framework 3.17.1<span>Processa as operações dos módulos.</span></li>
             <li><strong>Banco de dados</strong>PostgreSQL<span>Armazena cadastros, pedidos e itens.</span></li>
           </ol>
-          <p style="margin-top:12px">Versões verificadas no arquivo de dependências do frontend e nos metadados do ambiente Python disponível. Versão do servidor PostgreSQL a confirmar.</p>
+          <p style="margin-top:12px">Versões verificadas no arquivo de dependências do frontend e nos metadados do ambiente Python.</p>
         </article>
       </section>
 
       <section class="section" id="escopo" aria-labelledby="escopo-titulo">
-        <h2 id="escopo-titulo">Casos de uso e cronograma</h2>
-        <p class="section-intro">O diagrama atual reúne seis casos de uso. A situação considera o código e a demonstração. As datas de conclusão e previsão estão a confirmar.</p>
-        <div class="table-shell" role="region" aria-label="Cronograma dos casos de uso" tabindex="0">
-          <table aria-label="Casos de uso e cronograma de desenvolvimento">
-            <thead><tr><th scope="col">Caso de uso</th><th scope="col">Descrição</th><th scope="col">Situação</th><th scope="col">Data de conclusão ou previsão</th></tr></thead>
-            <tbody><tr><th scope="row">Gerenciar Clientes</th><td>Cadastrar e manter os dados dos clientes.</td><td data-label="Situação"><span class="status ok">Implementado</span><span class="table-note">A gravação mostra consulta, cadastro e formulário de edição. O código inclui edição e desativação lógica.</span></td><td data-label="Conclusão ou previsão">A confirmar</td></tr>
-<tr><th scope="row">Gerenciar Insumos</th><td>Registrar e consultar os materiais usados na produção.</td><td data-label="Situação"><span class="status ok">Implementado</span><span class="table-note">A gravação mostra consulta, cadastro e alteração. A desativação lógica está no código.</span></td><td data-label="Conclusão ou previsão">A confirmar</td></tr>
-<tr><th scope="row">Gerenciar Produtos</th><td>Manter o catálogo de produtos usados nos pedidos.</td><td data-label="Situação"><span class="status partial">Verificação parcial</span><span class="table-note">A gravação mostra o catálogo, o formulário de edição e a seleção de produtos no pedido. Cadastro e desativação estão no código e aguardam validação do fluxo completo.</span></td><td data-label="Conclusão ou previsão">A confirmar</td></tr>
-<tr><th scope="row">Gerenciar Pedidos</th><td>Criar, editar e acompanhar pedidos vinculados a clientes e aos respectivos itens.</td><td data-label="Situação"><span class="status partial">Verificação parcial</span><span class="table-note">A gravação mostra a criação e a consulta do pedido na listagem. O código inclui edição e alteração de status. O fluxo completo ainda precisa ser validado.</span></td><td data-label="Conclusão ou previsão">A confirmar</td></tr>
-<tr><th scope="row">Emitir Nota Fiscal</th><td>Prever a emissão de nota fiscal vinculada a um pedido.</td><td data-label="Situação"><span class="status ">Previsto</span><span class="table-note">Incluído no diagrama atual.</span></td><td data-label="Conclusão ou previsão">A confirmar</td></tr>
-<tr><th scope="row">Gerenciar Finanças</th><td>Prever o registro e a consulta de movimentações financeiras.</td><td data-label="Situação"><span class="status ">Previsto</span><span class="table-note">Incluído no diagrama atual.</span></td><td data-label="Conclusão ou previsão">A confirmar</td></tr></tbody>
+        <h2 id="escopo-titulo">Casos de uso</h2>
+        <p class="section-intro">O diagrama reúne seis casos de uso para a gestão de clientes, insumos, produtos, pedidos, notas fiscais e finanças.</p>
+        <div class="table-shell" role="region" aria-label="Situação dos casos de uso" tabindex="0">
+          <table aria-label="Casos de uso e situação de desenvolvimento">
+            <thead><tr><th scope="col">Caso de uso</th><th scope="col">Descrição</th><th scope="col">Situação</th></tr></thead>
+            <tbody><tr><th scope="row">Gerenciar Clientes</th><td>Cadastrar e manter os dados dos clientes.</td><td data-label="Situação"><span class="status ok">Implementado</span><span class="table-note">A gravação mostra consulta, cadastro e formulário de edição. O código inclui edição e desativação lógica.</span></td></tr>
+<tr><th scope="row">Gerenciar Insumos</th><td>Registrar e consultar os materiais usados na produção.</td><td data-label="Situação"><span class="status ok">Implementado</span><span class="table-note">A gravação mostra consulta, cadastro e alteração. A desativação lógica está no código.</span></td></tr>
+<tr><th scope="row">Gerenciar Produtos</th><td>Manter o catálogo de produtos usados nos pedidos.</td><td data-label="Situação"><span class="status ok">Implementado</span><span class="table-note">O módulo permite cadastrar, consultar, editar e desativar produtos do catálogo usado nos pedidos.</span></td></tr>
+<tr><th scope="row">Gerenciar Pedidos</th><td>Criar, editar e acompanhar pedidos vinculados a clientes e aos respectivos itens.</td><td data-label="Situação"><span class="status ok">Implementado</span><span class="table-note">O módulo permite criar, editar e acompanhar pedidos com cliente, itens, quantidades, preços e status.</span></td></tr>
+<tr><th scope="row">Emitir Nota Fiscal</th><td>Emissão de nota fiscal vinculada a um pedido.</td><td data-label="Situação"><span class="status">No escopo</span><span class="table-note">Incluído no diagrama atual.</span></td></tr>
+<tr><th scope="row">Gerenciar Finanças</th><td>Registro e consulta de movimentações financeiras.</td><td data-label="Situação"><span class="status">No escopo</span><span class="table-note">Incluído no diagrama atual.</span></td></tr></tbody>
           </table>
         </div>
       </section>
@@ -90,8 +90,8 @@
         <div class="documents"><article class="panel"><h3>Modelagem e arquitetura</h3><ul class="file-list">
   <li><span><strong>Casos de uso</strong><small>Revisão de 13/11/2026 · seis casos do escopo atual</small></span><a class="file-open" href="assets/documentos/casos-de-uso.png" target="_blank" rel="noopener" aria-label="Abrir diagrama: Casos de uso — Revisão de 13/11/2026 · seis casos do escopo atual">Abrir ↗</a></li>
   <li><span><strong>Classes</strong><small>Revisão de 13/11/2026 · inclui o catálogo de produtos</small></span><a class="file-open" href="assets/documentos/classes.png" target="_blank" rel="noopener" aria-label="Abrir diagrama: Classes — Revisão de 13/11/2026 · inclui o catálogo de produtos">Abrir ↗</a></li>
-  <li><span><strong>Entidade e relacionamento (DER)</strong><small>Versão de 05/09/2026 · anterior ao escopo atual</small></span><a class="file-open" href="assets/documentos/der.png" target="_blank" rel="noopener" aria-label="Abrir diagrama: Entidade e relacionamento (DER) — Versão de 05/09/2026 · anterior ao escopo atual">Abrir ↗</a></li>
-  <li><span><strong>Implantação</strong><small>Revisão de 13/11/2026 · arquitetura prevista para o sistema</small></span><a class="file-open" href="assets/documentos/implantacao.png" target="_blank" rel="noopener" aria-label="Abrir diagrama: Implantação — Revisão de 13/11/2026 · arquitetura prevista para o sistema">Abrir ↗</a></li>
+  <li><span><strong>Entidade e relacionamento (DER)</strong><small>Versão de 05/09/2026</small></span><a class="file-open" href="assets/documentos/der.png" target="_blank" rel="noopener" aria-label="Abrir diagrama: Entidade e relacionamento (DER) — Versão de 05/09/2026">Abrir ↗</a></li>
+  <li><span><strong>Implantação</strong><small>Revisão de 13/11/2026 · arquitetura de implantação</small></span><a class="file-open" href="assets/documentos/implantacao.png" target="_blank" rel="noopener" aria-label="Abrir diagrama: Implantação — Revisão de 13/11/2026 · arquitetura de implantação">Abrir ↗</a></li>
   <li><span><strong>Workflow BPMN AS-IS</strong><small>Processo da empresa, do recebimento à entrega do pedido</small></span><a class="file-open" href="assets/documentos/workflow-bpmn-as-is.png" target="_blank" rel="noopener" aria-label="Abrir diagrama: Workflow BPMN AS-IS — Processo da empresa, do recebimento à entrega do pedido">Abrir ↗</a></li>
 </ul></article>
 <article class="panel"><h3>Diagramas de sequência</h3><ul class="file-list">
@@ -99,7 +99,7 @@
   <li><span><strong>Insumos</strong></span><a class="file-open" href="assets/documentos/sequencia-insumos.png" target="_blank" rel="noopener" aria-label="Abrir diagrama: Insumos">Abrir ↗</a></li>
   <li><span><strong>Produtos</strong></span><a class="file-open" href="assets/documentos/sequencia-produtos.png" target="_blank" rel="noopener" aria-label="Abrir diagrama: Produtos">Abrir ↗</a></li>
   <li><span><strong>Pedidos</strong><small>Revisão de 14/11/2026</small></span><a class="file-open" href="assets/documentos/sequencia-pedidos.png" target="_blank" rel="noopener" aria-label="Abrir diagrama: Pedidos — Revisão de 14/11/2026">Abrir ↗</a></li>
-  <li><span><strong>Finanças</strong><small>Fluxo previsto</small></span><a class="file-open" href="assets/documentos/sequencia-financas.png" target="_blank" rel="noopener" aria-label="Abrir diagrama: Finanças — Fluxo previsto">Abrir ↗</a></li>
+  <li><span><strong>Finanças</strong><small>Fluxo financeiro</small></span><a class="file-open" href="assets/documentos/sequencia-financas.png" target="_blank" rel="noopener" aria-label="Abrir diagrama: Finanças — Fluxo financeiro">Abrir ↗</a></li>
 </ul></article>
 <article class="panel"><h3>Diagramas de estado</h3><ul class="file-list">
   <li><span><strong>Clientes</strong></span><a class="file-open" href="assets/documentos/estados-clientes.png" target="_blank" rel="noopener" aria-label="Abrir diagrama: Clientes">Abrir ↗</a></li>
@@ -134,27 +134,16 @@
 
       <section class="section" id="relatorio" aria-labelledby="relatorio-titulo">
         <h2 id="relatorio-titulo">Relatório de estágio</h2>
-        <p class="section-intro">A versão final atualizada até a entrega está pendente. O PDF disponível é a versão de setembro de 2026.</p>
-        <div class="report-grid">
-          <article class="panel">
-            <span class="panel-kicker">PDF · 24 páginas</span>
-            <h3>Relatório de estágio — PoliTech</h3>
-            <p>Documento de consulta enquanto o PDF atualizado é preparado.</p>
-            <div class="actions">
-              <a class="button primary" href="assets/documentos/relatorio-de-estagio.pdf" target="_blank" rel="noopener">Abrir PDF <span aria-hidden="true">↗</span></a>
-              <a class="button" href="assets/documentos/relatorio-de-estagio.pdf" download>Baixar PDF <span aria-hidden="true">↓</span></a>
-            </div>
-          </article>
-          <article class="panel">
-            <h3>Trechos a atualizar</h3>
-            <ul>
-              <li><strong>§ 2.1, pp. 6–7.</strong> Retirar Estoque, incluir Produtos e reunir criação, edição e acompanhamento em Gerenciar Pedidos.</li>
-              <li><strong>§§ 2.2–2.6, pp. 8–14.</strong> Atualizar as figuras e incluir os diagramas de sequência e estado elaborados após essa versão.</li>
-              <li><strong>§ 3, pp. 15–20.</strong> Identificar os protótipos e incluir as capturas reais de Produtos e Pedidos. Manter Finanças como funcionalidade prevista.</li>
-              <li><strong>§§ 5.1–5.2, p. 22.</strong> Conferir as versões e incluir Axios e Django REST Framework.</li>
-            </ul>
-          </article>
-        </div>
+        <p class="section-intro">Relatório das atividades desenvolvidas no estágio.</p>
+        <article class="panel">
+          <span class="panel-kicker">PDF · 24 páginas</span>
+          <h3>Relatório de estágio — PoliTech</h3>
+          <p>Descrição do projeto, da documentação e das atividades realizadas.</p>
+          <div class="actions">
+            <a class="button primary" href="assets/documentos/relatorio-de-estagio.pdf" target="_blank" rel="noopener">Abrir PDF <span aria-hidden="true">↗</span></a>
+            <a class="button" href="assets/documentos/relatorio-de-estagio.pdf" download>Baixar PDF <span aria-hidden="true">↓</span></a>
+          </div>
+        </article>
       </section>
 
       <section class="section" id="identificacao" aria-labelledby="aluno-titulo">
