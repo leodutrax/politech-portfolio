@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Portfólio bimestral do PoliTech, projeto de estágio de Leonardo Dutra da Cruz em Engenharia de Software na UniFil.">
+  <title>PoliTech | Portfólio de estágio</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#conteudo">Pular para o conteúdo</a>
+  <header class="sidebar">
+    <a class="brand" href="#inicio">
+      <span class="brand-mark" aria-hidden="true">P</span>
+      <span><strong>PoliTech</strong><small>Portfólio de estágio</small></span>
+    </a>
+    <button class="button menu-toggle" type="button" aria-expanded="false" aria-controls="navegacao" hidden>Menu <span aria-hidden="true">☰</span></button>
+    <nav class="nav" id="navegacao" aria-label="Seções do portfólio">
+      <a href="#inicio" aria-current="location"><span class="nav-icon" aria-hidden="true">⌂</span>Início</a>
+      <a href="#projeto"><span class="nav-icon" aria-hidden="true">▤</span>Sobre o projeto</a>
+      <a href="#escopo"><span class="nav-icon" aria-hidden="true">▦</span>Casos de uso e cronograma</a>
+      <a href="#documentacao"><span class="nav-icon" aria-hidden="true">▱</span>Documentação</a>
+      <a href="#demonstracao"><span class="nav-icon" aria-hidden="true">▷</span>Telas e vídeo</a>
+      <a href="#relatorio"><span class="nav-icon" aria-hidden="true">▧</span>Relatório de estágio</a>
+      <a href="#identificacao"><span class="nav-icon" aria-hidden="true">♙</span>Identificação</a>
+    </nav>
+    <div class="sidebar-meta"><strong>Leonardo Dutra da Cruz</strong>Engenharia de Software · UniFil</div>
+  </header>
+  <main id="conteudo" tabindex="-1">
+    <div class="wrap">
+      <div class="mast"><strong>Portfólio bimestral</strong><span class="academic">UniFil · Engenharia de Software</span></div>
+      <section class="hero" id="inicio" aria-labelledby="title">
+        <div>
+          <h1 id="title">Poli<span>Tech</span></h1>
+          <h2>Sistema web de gestão para a Polican Perfis de Alumínio</h2>
+          <p class="lead">O objetivo do PoliTech é centralizar os cadastros e facilitar a consulta de informações usadas na produção e no acompanhamento dos pedidos.</p>
+          <div class="actions">
+            <a class="button primary" href="#escopo">Ver casos de uso <span aria-hidden="true">↓</span></a>
+            <a class="button" href="#demonstracao">Assistir à demonstração <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+        <figure class="hero-art"><img src="assets/abertura.webp" alt="Tela inicial do PoliTech na versão demonstrada" fetchpriority="high"><figcaption>Tela inicial do PoliTech na versão demonstrada</figcaption></figure>
+      </section>
+
+      <section class="section" id="projeto" aria-labelledby="sobre-titulo">
+        <h2 id="sobre-titulo">Sobre o projeto</h2>
+        <p class="section-intro">O PoliTech foi desenvolvido durante o estágio para apoiar a rotina da Polican Perfis de Alumínio.</p>
+        <div class="cards">
+          <article class="panel"><h3>Problema</h3><p>A empresa usava planilhas e registros em papel para controlar informações. Isso dificultava localizar dados e acompanhar os materiais e os pedidos ao longo do processo.</p></article>
+          <article class="panel"><h3>Solução</h3><p>O sistema reúne os cadastros em uma interface web. Os pedidos ficam vinculados aos clientes e aos itens selecionados no catálogo.</p></article>
+          <article class="panel"><h3>Evolução no bimestre</h3><p>O módulo de Estoque saiu do planejamento. Gerenciar Insumos permanece no escopo. O catálogo de produtos passou a apoiar a criação de pedidos, com seleção do produto, quantidade e preço unitário.</p></article>
+        </div>
+        <article class="panel stack">
+          <h3>Arquitetura do sistema</h3>
+          <p>A interface envia as operações para a API REST via Axios. A API valida os dados e usa o PostgreSQL para armazenar os registros.</p>
+          <ol class="flow">
+            <li><strong>Interface</strong>React 19.2.7, TypeScript 6.0.3 e Material UI 9.3.0<span>Axios 1.19.0 faz as requisições.</span></li>
+            <li><strong>API REST</strong>Django 6.0.6 e Django REST Framework 3.17.1<span>Processa as operações dos módulos.</span></li>
+            <li><strong>Banco de dados</strong>PostgreSQL<span>Armazena cadastros, pedidos e itens.</span></li>
+          </ol>
+          <p style="margin-top:12px">Versões verificadas no arquivo de dependências do frontend e nos metadados do ambiente Python disponível. Versão do servidor PostgreSQL a confirmar.</p>
+        </article>
+      </section>
+
+      <section class="section" id="escopo" aria-labelledby="escopo-titulo">
+        <h2 id="escopo-titulo">Casos de uso e cronograma</h2>
+        <p class="section-intro">O diagrama atual reúne seis casos de uso. A situação considera o código e a demonstração. As datas de conclusão e previsão estão a confirmar.</p>
+        <div class="table-shell" role="region" aria-label="Cronograma dos casos de uso" tabindex="0">
+          <table aria-label="Casos de uso e cronograma de desenvolvimento">
+            <thead><tr><th scope="col">Caso de uso</th><th scope="col">Descrição</th><th scope="col">Situação</th><th scope="col">Data de conclusão ou previsão</th></tr></thead>
+            <tbody><tr><th scope="row">Gerenciar Clientes</th><td>Cadastrar e manter os dados dos clientes.</td><td data-label="Situação"><span class="status ok">Implementado</span><span class="table-note">A gravação mostra consulta, cadastro e formulário de edição. O código inclui edição e desativação lógica.</span></td><td data-label="Conclusão ou previsão">A confirmar</td></tr>
+<tr><th scope="row">Gerenciar Insumos</th><td>Registrar e consultar os materiais usados na produção.</td><td data-label="Situação"><span class="status ok">Implementado</span><span class="table-note">A gravação mostra consulta, cadastro e alteração. A desativação lógica está no código.</span></td><td data-label="Conclusão ou previsão">A confirmar</td></tr>
+<tr><th scope="row">Gerenciar Produtos</th><td>Manter o catálogo de produtos usados nos pedidos.</td><td data-label="Situação"><span class="status partial">Verificação parcial</span><span class="table-note">A gravação mostra o catálogo, o formulário de edição e a seleção de produtos no pedido. Cadastro e desativação estão no código e aguardam validação do fluxo completo.</span></td><td data-label="Conclusão ou previsão">A confirmar</td></tr>
+<tr><th scope="row">Gerenciar Pedidos</th><td>Criar, editar e acompanhar pedidos vinculados a clientes e aos respectivos itens.</td><td data-label="Situação"><span class="status partial">Verificação parcial</span><span class="table-note">A gravação mostra a criação e a consulta do pedido na listagem. O código inclui edição e alteração de status. O fluxo completo ainda precisa ser validado.</span></td><td data-label="Conclusão ou previsão">A confirmar</td></tr>
+<tr><th scope="row">Emitir Nota Fiscal</th><td>Prever a emissão de nota fiscal vinculada a um pedido.</td><td data-label="Situação"><span class="status ">Previsto</span><span class="table-note">Incluído no diagrama atual.</span></td><td data-label="Conclusão ou previsão">A confirmar</td></tr>
+<tr><th scope="row">Gerenciar Finanças</th><td>Prever o registro e a consulta de movimentações financeiras.</td><td data-label="Situação"><span class="status ">Previsto</span><span class="table-note">Incluído no diagrama atual.</span></td><td data-label="Conclusão ou previsão">A confirmar</td></tr></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="section" id="documentacao" aria-labelledby="docs-titulo">
+        <h2 id="docs-titulo">Documentação</h2>
+        <p class="section-intro">Diagramas de escopo, estrutura e comportamento do PoliTech, com versões anteriores disponíveis para consulta.</p>
+        <article class="panel drive">
+          <div><h3>Pasta de diagramas</h3><p>Abra a pasta original no Google Drive.</p></div>
+          <a class="button primary" href="https://drive.google.com/drive/folders/1rlgmRKNaLqw8lkGvGAj39KQHBLUimhQd?usp=share_link" target="_blank" rel="noopener">Abrir no Google Drive <span aria-hidden="true">↗</span></a>
+        </article>
+        <div class="documents"><article class="panel"><h3>Modelagem e arquitetura</h3><ul class="file-list">
+  <li><span><strong>Casos de uso</strong><small>Revisão de 13/11/2026 · seis casos do escopo atual</small></span><a class="file-open" href="assets/documentos/casos-de-uso.png" target="_blank" rel="noopener" aria-label="Abrir diagrama: Casos de uso — Revisão de 13/11/2026 · seis casos do escopo atual">Abrir ↗</a></li>
+  <li><span><strong>Classes</strong><small>Revisão de 13/11/2026 · inclui o catálogo de produtos</small></span><a class="file-open" href="assets/documentos/classes.png" target="_blank" rel="noopener" aria-label="Abrir diagrama: Classes — Revisão de 13/11/2026 · inclui o catálogo de produtos">Abrir ↗</a></li>
+  <li><span><strong>Entidade e relacionamento (DER)</strong><small>Versão de 05/09/2026 · anterior ao escopo atual</small></span><a class="file-open" href="assets/documentos/der.png" target="_blank" rel="noopener" aria-label="Abrir diagrama: Entidade e relacionamento (DER) — Versão de 05/09/2026 · anterior ao escopo atual">Abrir ↗</a></li>
+  <li><span><strong>Implantação</strong><small>Revisão de 13/11/2026 · arquitetura prevista para o sistema</small></span><a class="file-open" href="assets/documentos/implantacao.png" target="_blank" rel="noopener" aria-label="Abrir diagrama: Implantação — Revisão de 13/11/2026 · arquitetura prevista para o sistema">Abrir ↗</a></li>
+  <li><span><strong>Workflow BPMN AS-IS</strong><small>Processo da empresa, do recebimento à entrega do pedido</small></span><a class="file-open" href="assets/documentos/workflow-bpmn-as-is.png" target="_blank" rel="noopener" aria-label="Abrir diagrama: Workflow BPMN AS-IS — Processo da empresa, do recebimento à entrega do pedido">Abrir ↗</a></li>
+</ul></article>
+<article class="panel"><h3>Diagramas de sequência</h3><ul class="file-list">
+  <li><span><strong>Clientes</strong></span><a class="file-open" href="assets/documentos/sequencia-clientes.png" target="_blank" rel="noopener" aria-label="Abrir diagrama: Clientes">Abrir ↗</a></li>
+  <li><span><strong>Insumos</strong></span><a class="file-open" href="assets/documentos/sequencia-insumos.png" target="_blank" rel="noopener" aria-label="Abrir diagrama: Insumos">Abrir ↗</a></li>
+  <li><span><strong>Produtos</strong></span><a class="file-open" href="assets/documentos/sequencia-produtos.png" target="_blank" rel="noopener" aria-label="Abrir diagrama: Produtos">Abrir ↗</a></li>
+  <li><span><strong>Pedidos</strong><small>Revisão de 14/11/2026</small></span><a class="file-open" href="assets/documentos/sequencia-pedidos.png" target="_blank" rel="noopener" aria-label="Abrir diagrama: Pedidos — Revisão de 14/11/2026">Abrir ↗</a></li>
+  <li><span><strong>Finanças</strong><small>Fluxo previsto</small></span><a class="file-open" href="assets/documentos/sequencia-financas.png" target="_blank" rel="noopener" aria-label="Abrir diagrama: Finanças — Fluxo previsto">Abrir ↗</a></li>
+</ul></article>
+<article class="panel"><h3>Diagramas de estado</h3><ul class="file-list">
+  <li><span><strong>Clientes</strong></span><a class="file-open" href="assets/documentos/estados-clientes.png" target="_blank" rel="noopener" aria-label="Abrir diagrama: Clientes">Abrir ↗</a></li>
+  <li><span><strong>Insumos</strong></span><a class="file-open" href="assets/documentos/estados-insumos.png" target="_blank" rel="noopener" aria-label="Abrir diagrama: Insumos">Abrir ↗</a></li>
+  <li><span><strong>Produtos</strong></span><a class="file-open" href="assets/documentos/estados-produtos.png" target="_blank" rel="noopener" aria-label="Abrir diagrama: Produtos">Abrir ↗</a></li>
+  <li><span><strong>Pedidos</strong></span><a class="file-open" href="assets/documentos/estados-pedidos.png" target="_blank" rel="noopener" aria-label="Abrir diagrama: Pedidos">Abrir ↗</a></li>
+</ul></article></div><details class="panel"><summary>Versões anteriores dos diagramas</summary><ul class="file-list">
+  <li><span><strong>Casos de uso</strong><small>24/08/2026 · consta no relatório</small></span><a class="file-open" href="assets/documentos/casos-de-uso-agosto.png" target="_blank" rel="noopener" aria-label="Abrir diagrama: Casos de uso — 24/08/2026 · consta no relatório">Abrir ↗</a></li>
+  <li><span><strong>Casos de uso</strong><small>30/07/2026</small></span><a class="file-open" href="assets/documentos/casos-de-uso-julho.png" target="_blank" rel="noopener" aria-label="Abrir diagrama: Casos de uso — 30/07/2026">Abrir ↗</a></li>
+  <li><span><strong>Casos de uso</strong><small>27/05/2026</small></span><a class="file-open" href="assets/documentos/casos-de-uso-maio.pdf" target="_blank" rel="noopener" aria-label="Abrir diagrama: Casos de uso — 27/05/2026">Abrir ↗</a></li>
+  <li><span><strong>Classes</strong><small>04/09/2026 · consta no relatório</small></span><a class="file-open" href="assets/documentos/classes-setembro.png" target="_blank" rel="noopener" aria-label="Abrir diagrama: Classes — 04/09/2026 · consta no relatório">Abrir ↗</a></li>
+  <li><span><strong>Classes</strong><small>24/08/2026</small></span><a class="file-open" href="assets/documentos/classes-agosto.png" target="_blank" rel="noopener" aria-label="Abrir diagrama: Classes — 24/08/2026">Abrir ↗</a></li>
+  <li><span><strong>DER</strong><small>27/08/2026</small></span><a class="file-open" href="assets/documentos/der-27-agosto.png" target="_blank" rel="noopener" aria-label="Abrir diagrama: DER — 27/08/2026">Abrir ↗</a></li>
+  <li><span><strong>DER lógico</strong><small>24/08/2026</small></span><a class="file-open" href="assets/documentos/der-logico-agosto.png" target="_blank" rel="noopener" aria-label="Abrir diagrama: DER lógico — 24/08/2026">Abrir ↗</a></li>
+  <li><span><strong>DER</strong><small>13/08/2026 · modelo de planejamento com produtos e itens</small></span><a class="file-open" href="assets/documentos/der-13-agosto.png" target="_blank" rel="noopener" aria-label="Abrir diagrama: DER — 13/08/2026 · modelo de planejamento com produtos e itens">Abrir ↗</a></li>
+  <li><span><strong>Implantação</strong><small>24/08/2026 · consta no relatório</small></span><a class="file-open" href="assets/documentos/implantacao-agosto.png" target="_blank" rel="noopener" aria-label="Abrir diagrama: Implantação — 24/08/2026 · consta no relatório">Abrir ↗</a></li>
+  <li><span><strong>Sequência de pedidos</strong><small>18/10/2026</small></span><a class="file-open" href="assets/documentos/sequencia-pedidos-outubro.png" target="_blank" rel="noopener" aria-label="Abrir diagrama: Sequência de pedidos — 18/10/2026">Abrir ↗</a></li>
+</ul></details>
+      </section>
+
+      <section class="section" id="demonstracao" aria-labelledby="demo-titulo">
+        <h2 id="demo-titulo">Telas e vídeo</h2>
+        <p class="section-intro">A gravação apresenta a versão executada do PoliTech. As capturas mostram operações com dados de demonstração. Os dados de identificação foram ocultados na edição para publicação.</p>
+        <figure class="panel video-card"><video controls playsinline preload="metadata" poster="assets/abertura.webp" aria-label="Demonstração do PoliTech"><source src="assets/media/demonstracao.mp4" type="video/mp4">Seu navegador pode abrir o vídeo pelo link abaixo.</video><figcaption class="video-caption"><span><strong>Demonstração do PoliTech</strong><small>3 min 05 s · Edição da gravação original</small></span><a class="button" href="assets/media/demonstracao.mp4" target="_blank" rel="noopener">Abrir vídeo ↗</a></figcaption></figure>
+<div class="gallery">
+<figure class="panel shot"><a href="assets/capturas/clientes.webp" data-title="Clientes" aria-label="Ampliar captura de Clientes"><img src="assets/capturas/clientes.webp" alt="Tabela de clientes com dados de identificação ocultados" loading="lazy"><span class="zoom" aria-hidden="true">Ampliar ↗</span></a><figcaption><strong>Clientes</strong><span>A lista mostra o tipo de documento, o status e as ações de edição e desativação após a inclusão de um cadastro.</span></figcaption></figure>
+<figure class="panel shot"><a href="assets/capturas/insumos.webp" data-title="Insumos" aria-label="Ampliar captura de Insumos"><img src="assets/capturas/insumos.webp" alt="Tabela de materiais com descrição, quantidade e situação" loading="lazy"><span class="zoom" aria-hidden="true">Ampliar ↗</span></a><figcaption><strong>Insumos</strong><span>A lista mostra o insumo incluído durante o teste e sua quantidade após a edição.</span></figcaption></figure>
+<figure class="panel shot"><a href="assets/capturas/produtos.webp" data-title="Produtos" aria-label="Ampliar captura de Produtos"><img src="assets/capturas/produtos.webp" alt="Catálogo de produtos com preços, descrições e situação" loading="lazy"><span class="zoom" aria-hidden="true">Ampliar ↗</span></a><figcaption><strong>Produtos</strong><span>O catálogo permite consultar os produtos que podem ser selecionados na criação de pedidos.</span></figcaption></figure>
+<figure class="panel shot"><a href="assets/capturas/pedidos.webp" data-title="Pedidos" aria-label="Ampliar captura de Pedidos"><img src="assets/capturas/pedidos.webp" alt="Listagem com o pedido de teste e os respectivos itens, previsão, total e status" loading="lazy"><span class="zoom" aria-hidden="true">Ampliar ↗</span></a><figcaption><strong>Pedidos</strong><span>O novo pedido aparece na lista com os dois itens, o total calculado e o status Novo.</span></figcaption></figure>
+</div>
+      </section>
+
+      <section class="section" id="relatorio" aria-labelledby="relatorio-titulo">
+        <h2 id="relatorio-titulo">Relatório de estágio</h2>
+        <p class="section-intro">A versão final atualizada até a entrega está pendente. O PDF disponível é a versão de setembro de 2026.</p>
+        <div class="report-grid">
+          <article class="panel">
+            <span class="panel-kicker">PDF · 24 páginas</span>
+            <h3>Relatório de estágio — PoliTech</h3>
+            <p>Documento de consulta enquanto o PDF atualizado é preparado.</p>
+            <div class="actions">
+              <a class="button primary" href="assets/documentos/relatorio-de-estagio.pdf" target="_blank" rel="noopener">Abrir PDF <span aria-hidden="true">↗</span></a>
+              <a class="button" href="assets/documentos/relatorio-de-estagio.pdf" download>Baixar PDF <span aria-hidden="true">↓</span></a>
+            </div>
+          </article>
+          <article class="panel">
+            <h3>Trechos a atualizar</h3>
+            <ul>
+              <li><strong>§ 2.1, pp. 6–7.</strong> Retirar Estoque, incluir Produtos e reunir criação, edição e acompanhamento em Gerenciar Pedidos.</li>
+              <li><strong>§§ 2.2–2.6, pp. 8–14.</strong> Atualizar as figuras e incluir os diagramas de sequência e estado elaborados após essa versão.</li>
+              <li><strong>§ 3, pp. 15–20.</strong> Identificar os protótipos e incluir as capturas reais de Produtos e Pedidos. Manter Finanças como funcionalidade prevista.</li>
+              <li><strong>§§ 5.1–5.2, p. 22.</strong> Conferir as versões e incluir Axios e Django REST Framework.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="identificacao" aria-labelledby="aluno-titulo">
+        <h2 id="aluno-titulo">Identificação do aluno</h2>
+        <p class="section-intro">Engenharia de Software · Centro Universitário Filadélfia (UniFil)</p>
+        <dl class="panel student">
+          <div><dt>Aluno</dt><dd>Leonardo Dutra da Cruz</dd></div>
+          <div><dt>Matrícula</dt><dd>242072001</dd></div>
+          <div><dt>Professor orientador</dt><dd>João Pedro Brustolin Szlachta</dd></div>
+        </dl>
+      </section>
+
+      <footer class="footer"><span>PoliTech · Portfólio de estágio</span><a href="#inicio">Voltar ao início ↑</a></footer>
+    </div>
+  </main>
+  <dialog id="visualizador" aria-labelledby="imagem-titulo">
+    <div class="dialog-bar"><strong id="imagem-titulo">Captura ampliada</strong><form method="dialog"><button type="submit" class="button">Fechar</button></form></div>
+    <img alt="">
+    <p></p>
+  </dialog>
+</body>
+</html>
